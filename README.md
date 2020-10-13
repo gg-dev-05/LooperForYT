@@ -10,7 +10,7 @@ For using the extension:
     * [edge](https://www.windowscentral.com/how-install-non-store-extensions-microsoft-edge) 
     * [chrome](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/) 
     
-*Sorry, no support for firefox* :(
+*Sorry, no support for firefox* **yet** :(
 <hr>
 
 ## USAGE
