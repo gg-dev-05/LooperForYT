@@ -20,6 +20,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request === "stop") {
     console.log("setting stop as:" + myPlayer.currentTime)
     stopTime = myPlayer.currentTime;
+    loopFun();
+
   }
 
   if (request === "end") {
@@ -28,26 +30,26 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   }
 
   if (request === "loop") {
-    console.log(`Loop starting from ${startTime} to ${stopTime}`);
-    if (interval != undefined) {
-      clearInterval(interval);
-      console.log("clear setInterval");
-      myPlayer.currentTime = startTime;
-    }
-    interval = setInterval(function () {
-      if (myPlayer.currentTime >= stopTime || myPlayer.currentTime <= startTime) {
-        console.log("Jump to start");
-        myPlayer.currentTime = startTime;
-      }
-    }, 500);
-
+    loopFun();
   }
 
+});
 
 
-
-
-})
+function loopFun(){
+  console.log(`Loop starting from ${startTime} to ${stopTime}`);
+  if (interval != undefined) {
+    clearInterval(interval);
+    console.log("clear setInterval");
+    myPlayer.currentTime = startTime;
+  }
+  interval = setInterval(function () {
+    if (myPlayer.currentTime >= stopTime || myPlayer.currentTime <= startTime) {
+      console.log("Jump to start");
+      myPlayer.currentTime = startTime;
+    }
+  }, 500);
+};
 
 //alert('Grrr.')
 // chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
