@@ -14,7 +14,7 @@ For using the extension:
 <hr>
 
 ## USAGE
-![ex](https://user-images.githubusercontent.com/59741135/95496960-37881200-09bf-11eb-8a63-c240c55f0fd6.PNG)
+![ex](https://user-images.githubusercontent.com/59741135/96248333-0912c400-0fc9-11eb-9328-ed95663befb1.PNG)
 
 The extension consists of:
 * **START**: This sets the *STARTING POINT* of the *LOOP* (Default value: 0 secs)
@@ -23,5 +23,5 @@ The extension consists of:
 * **END**: This will *END* the *LOOP* process.
  
 
-
-*Version 1.0*
+Will work only on [youtube](https://www.youtube.com)  
+*Version 2.0*
