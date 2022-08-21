@@ -1,19 +1,16 @@
 {
   "name": "Looper",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": [ "*://*.youtube.com/*" ],
+      "matches": ["*://*.youtube.com/*"],
       "js": ["content.js"]
     }
   ],
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html",
     "default_title": "Looper"
-  },
-  "background": {
-    "scripts": ["background.js"]
   },
   "permissions": ["tabs"]
 }
